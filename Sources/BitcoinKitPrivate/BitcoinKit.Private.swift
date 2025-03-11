@@ -224,7 +224,7 @@ public class _HDKey {
             }
             BN_mod_add(privateKeyNum, privateKeyNum, factor, curveOrder, ctx)
             
-             Check for invalid derivation.
+            // Check for invalid derivation.
             if BN_is_zero(privateKeyNum) {
                 return nil
             }
