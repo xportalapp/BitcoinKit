@@ -225,7 +225,7 @@ public class _HDKey {
             BN_mod_add(privateKeyNum, privateKeyNum, factor, curveOrder, ctx)
             
             // Check for invalid derivation.
-            if BN_is_zero(privateKeyNum) {
+            if (BN_is_zero(privateKeyNum) != 0) {
                 return nil
             }
 //            if privateKeyNum.pointee.top == 0 { // BN_is_zero
